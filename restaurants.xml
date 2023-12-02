@@ -1,24 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type = "text/xsl" href = "restaurants.xsl"?>
-<restaurants xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="restaurants.xsd">
-    <region id="reg1" name="Sofia">
-        <restaurant id="res-sof-1" name="Ceazer's Pizza">
-            <type>Италиански</type>
-            <rating>4.5</rating>
-            <description>An Amazing Restaurant</description>
+
+<!-- <!DOCTYPE catalogue SYSTEM "./restaurants.dtd"> -->
+
+<catalogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./restaurants.xsd">
+    <!--Regions-->
+    <regions>
+        <region regionId="S">
+            <name>Sofia</name>
+        </region>
+        <region regionId="B">
+            <name>Burgas</name>
+        </region>
+    </regions>
+
+    <!--Chains-->
+    <restaurant-chains>
+        <chain chainId="H">
+            <name>Happy</name>
+        </chain>
+        <chain chainId="C">
+            <name>Ceazers</name>
+        </chain>
+    </restaurant-chains>
+
+    <!--Restaurants-->
+    <restaurants>
+        <restaurant restaurantId="CeazersPizza" regionRef="S" chainRef="Ceazers">
+            <name>Ceazer's Pizza</name>
+            <type>Italian</type>
+            <rating>4.58</rating>
+            <description>A classic Italian Pizza Restaurant</description>
         </restaurant>
-        <restaurant id="res-sof-2" name="Ceazer's Pizza">
-            <type>Италиански</type>
-            <rating>4.5</rating>
-            <description>An Amazing Restaurant</description>
-        </restaurant>
-    </region>
-    <region id="reg2" name="Burgas">
-        <restaurant id="res-bur-1" name="Ceazer's Pizza">
-            <type>Италиански</type>
-            <rating>4.5</rating>
-            <description>An Amazing Restaurant 2</description>
-        </restaurant>
-    </region>
-</restaurants>
+    </restaurants>
+</catalogue>

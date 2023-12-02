@@ -1,0 +1,9 @@
+<fop>
+    <renderers>
+        <renderer mime="application/pdf">
+            <pdf>
+                <allow-external-entities>true</allow-external-entities>
+            </pdf>
+        </renderer>
+    </renderers>
+</fop>

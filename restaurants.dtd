@@ -1,10 +1,24 @@
-<!ELEMENT restaurants (region+)>
-<!ELEMENT region (restaurant+)>
-<!ATTLIST region id ID #REQUIRED>
-<!ATTLIST region name CDATA #REQUIRED>
-<!ELEMENT restaurant (type, rating, description)>
-<!ATTLIST restaurant id ID #REQUIRED>
-<!ATTLIST restaurant name CDATA #REQUIRED>
+<!ELEMENT catalogue (regions, restaurant-chains, restaurants)>
+<!ATTLIST catalogue 
+xmlns:xsi CDATA #REQUIRED
+xsi:noNamespaceSchemaLocation CDATA #REQUIRED>
+
+<!ELEMENT regions (region+)>
+<!ELEMENT region (name)>
+<!ATTLIST region regionId CDATA #REQUIRED>
+
+<!ELEMENT restaurant-chains (chain+)>
+<!ELEMENT chain (name)>
+<!ATTLIST chain chainId CDATA #REQUIRED>
+
+<!ELEMENT restaurants (restaurant+)>
+<!ELEMENT restaurant (name, type, rating, description)>
+<!ATTLIST restaurant
+    restaurantId CDATA #REQUIRED
+    regionRef CDATA #REQUIRED
+    chainRef CDATA #IMPLIED>
+
+<!ELEMENT name (#PCDATA)>
 <!ELEMENT type (#PCDATA)>
 <!ELEMENT rating (#PCDATA)>
 <!ELEMENT description (#PCDATA)>

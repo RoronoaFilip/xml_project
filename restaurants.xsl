@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0"
-    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:fo="http://www.w3.org/1999/XSL/Format">
+<?xml version = "1.0" encoding = "UTF-8"?>
+<xsl:stylesheet version = "1.0" 
+	xmlns:xsl = "http://www.w3.org/1999/XSL/Transform" 
+	xmlns:fo = "http://www.w3.org/1999/XSL/Format">
     <xsl:output method = "xml" indent = "yes"/>
 
     <xsl:template match="/">
@@ -61,11 +61,11 @@
                 <fo:page-sequence master-reference="page">
                     <fo:flow flow-name="xsl-region-body">
                         <fo:block font-size="24pt" font-weight="bold" text-align="center" space-after="12pt" color="#0066cc">
-                            <xsl:value-of select="@name" />
+                            <xsl:value-of select="name" />
                         </fo:block>
                         <fo:block space-after="18pt" />
 
-                        <xsl:for-each select="restaurant">
+                        <xsl:for-each select="restaurants/restaurant[@regionRef = current()/@regionId]">
                             <fo:block space-after="18pt" border="1pt solid #CCCCCC" padding="6pt">
                                 <fo:table>
                                     <fo:table-column column-width="70%"/>

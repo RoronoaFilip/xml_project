@@ -1,30 +1,64 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-    <xs:element name="restaurants">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="region" type="regionType" minOccurs="0" maxOccurs="unbounded" />
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
+    <!-- Define complex types for elements -->
 
     <xs:complexType name="regionType">
         <xs:sequence>
-            <xs:element name="restaurant" type="restaurantType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="name" type="xs:string"/>
         </xs:sequence>
-        <xs:attribute name="id" type="xs:ID" use="required" />
-        <xs:attribute name="name" type="xs:string" use="required" />
+        <xs:attribute name="regionId" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="chainType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="chainId" type="xs:string" use="required"/>
     </xs:complexType>
 
     <xs:complexType name="restaurantType">
         <xs:sequence>
-            <xs:element name="type" type="xs:string" />
-            <xs:element name="rating" type="xs:decimal" />
-            <xs:element name="description" type="xs:string" />
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="type" type="xs:string"/>
+            <xs:element name="rating" type="xs:float"/>
+            <xs:element name="description" type="xs:string"/>
         </xs:sequence>
-        <xs:attribute name="id" type="xs:ID" use="required" />
-        <xs:attribute name="name" type="xs:string" use="required" />
+        <xs:attribute name="restaurantId" type="xs:string" use="required"/>
+        <xs:attribute name="regionRef" type="xs:string" use="required"/>
+        <xs:attribute name="chainRef" type="xs:string"/>
     </xs:complexType>
+
+    <!-- Define the root element and its attributes -->
+
+    <xs:element name="catalogue">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="regions">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="region" type="regionType" minOccurs="1" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="restaurant-chains">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="chain" type="chainType" minOccurs="1" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="restaurants">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="restaurant" type="restaurantType" minOccurs="1" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
 
 </xs:schema>
