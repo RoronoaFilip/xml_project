@@ -1,0 +1,10 @@
+<!ELEMENT restaurants (region+)>
+<!ELEMENT region (restaurant+)>
+<!ATTLIST region id ID #REQUIRED>
+<!ATTLIST region name CDATA #REQUIRED>
+<!ELEMENT restaurant (type, rating, description)>
+<!ATTLIST restaurant id ID #REQUIRED>
+<!ATTLIST restaurant name CDATA #REQUIRED>
+<!ELEMENT type (#PCDATA)>
+<!ELEMENT rating (#PCDATA)>
+<!ELEMENT description (#PCDATA)>

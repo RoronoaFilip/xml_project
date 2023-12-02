@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type = "text/xsl" href = "restaurants.xsl"?>
+<restaurants xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="restaurants.xsd">
+    <region id="reg1" name="Sofia">
+        <restaurant id="res-sof-1" name="Ceazer's Pizza">
+            <type>Италиански</type>
+            <rating>4.5</rating>
+            <description>An Amazing Restaurant</description>
+        </restaurant>
+        <restaurant id="res-sof-2" name="Ceazer's Pizza">
+            <type>Италиански</type>
+            <rating>4.5</rating>
+            <description>An Amazing Restaurant</description>
+        </restaurant>
+    </region>
+    <region id="reg2" name="Burgas">
+        <restaurant id="res-bur-1" name="Ceazer's Pizza">
+            <type>Италиански</type>
+            <rating>4.5</rating>
+            <description>An Amazing Restaurant 2</description>
+        </restaurant>
+    </region>
+</restaurants>

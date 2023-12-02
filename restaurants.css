@@ -1,0 +1,22 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+region {
+  display: block;
+  margin-bottom: 20px;
+}
+
+restaurant {
+  display: block;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+type,
+rating,
+description {
+  display: block;
+  margin-bottom: 5px;
+}
