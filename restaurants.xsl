@@ -65,7 +65,7 @@
                         </fo:block>
                         <fo:block space-after="18pt" />
 
-                        <xsl:for-each select="restaurants/restaurant[@regionRef = current()/@regionId]">
+                        <xsl:for-each select="/catalogue/restaurants/restaurant[@regionRef = current()/@regionId]">
                             <fo:block space-after="18pt" border="1pt solid #CCCCCC" padding="6pt">
                                 <fo:table>
                                     <fo:table-column column-width="70%"/>
@@ -74,7 +74,17 @@
                                         <fo:table-row>
                                             <fo:table-cell>
                                                 <fo:block font-size="18pt" font-weight="bold" space-after="8pt" color="#333333">
-                                                    <xsl:value-of select="@name" />
+                                                    <xsl:value-of select="name" />
+                                                </fo:block>
+                                                <fo:block font-size="10pt" space-after="6pt" color="#666666">
+                                                    <xsl:choose>
+                                                        <xsl:when test="@chainRef">
+                                                            Restaurant Chain: <xsl:value-of select="@chainRef"/>
+                                                        </xsl:when>
+                                                        <xsl:otherwise>
+                                                            Restaurant Chain: UNKNOWN
+                                                        </xsl:otherwise>
+                                                    </xsl:choose>
                                                 </fo:block>
                                                 <fo:block font-size="10pt" space-after="6pt" color="#666666"> Type: <xsl:value-of select="type" />
                                                 </fo:block>
