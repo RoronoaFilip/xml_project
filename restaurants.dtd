@@ -12,13 +12,17 @@ xsi:noNamespaceSchemaLocation CDATA #REQUIRED>
 <!ATTLIST chain chainId CDATA #REQUIRED>
 
 <!ELEMENT restaurants (restaurant+)>
-<!ELEMENT restaurant (name, type, rating, description)>
+<!ELEMENT restaurant (name, type, rating, description, image)>
 <!ATTLIST restaurant
     restaurantId CDATA #REQUIRED
     regionRef CDATA #REQUIRED
     chainRef CDATA #IMPLIED>
 
+<!ATTLIST image 
+    href CDATA #REQUIRED>
+
 <!ELEMENT name (#PCDATA)>
 <!ELEMENT type (#PCDATA)>
 <!ELEMENT rating (#PCDATA)>
 <!ELEMENT description (#PCDATA)>
+<!ELEMENT image (#PCDATA)>

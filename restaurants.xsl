@@ -57,6 +57,7 @@
                 </fo:flow>
             </fo:page-sequence>
 
+            <!--Each Region on a new Page-->
             <xsl:for-each select="//region">
                 <fo:page-sequence master-reference="page">
                     <fo:flow flow-name="xsl-region-body">
@@ -65,17 +66,21 @@
                         </fo:block>
                         <fo:block space-after="18pt" />
 
+                        <!--Each Restaurant in the current Region-->
                         <xsl:for-each select="/catalogue/restaurants/restaurant[@regionRef = current()/@regionId]">
-                            <fo:block space-after="18pt" border="1pt solid #CCCCCC" padding="6pt">
-                                <fo:table>
+                            <fo:block space-after="18pt" border="1pt solid #CCCCCC" padding="16pt">
+                                <fo:table table-layout="fixed" width="100%">
                                     <fo:table-column column-width="70%"/>
                                     <fo:table-column column-width="30%"/>
                                     <fo:table-body>
                                         <fo:table-row>
+                                            <!--Restaurant Info to the Left.-->
                                             <fo:table-cell>
+                                                <!--Restaurant Name-->
                                                 <fo:block font-size="18pt" font-weight="bold" space-after="8pt" color="#333333">
                                                     <xsl:value-of select="name" />
                                                 </fo:block>
+                                                <!--Restaurant Chain, if present-->
                                                 <fo:block font-size="10pt" space-after="6pt" color="#666666">
                                                     <xsl:choose>
                                                         <xsl:when test="@chainRef">
@@ -86,16 +91,28 @@
                                                         </xsl:otherwise>
                                                     </xsl:choose>
                                                 </fo:block>
+                                                <!--Restaurant Type-->
                                                 <fo:block font-size="10pt" space-after="6pt" color="#666666"> Type: <xsl:value-of select="type" />
                                                 </fo:block>
+                                                <!--Restaurant Rating-->
                                                 <fo:block font-size="10pt" space-after="6pt" color="#666666"> Rating: <xsl:value-of select="rating" />
                                                 </fo:block>
+                                                <!--Restaurant Description-->
                                                 <fo:block font-size="10pt" space-after="6pt" color="#666666"> Description: <xsl:value-of select="description" />
                                                 </fo:block>
                                             </fo:table-cell>
+
+                                            <!--Image to the right-->
                                             <fo:table-cell>
+                                                <!--Image Block-->
                                                 <fo:block>
-                                                    <fo:external-graphic src="https://i.imgur.com/yXhLwEg.png" content-width="70mm" content-height="70mm" />
+                                                    <fo:external-graphic>
+                                                        <xsl:attribute name="src">
+                                                            <xsl:value-of select="concat('url(images/', current()/image/@href, ')')" />
+                                                        </xsl:attribute>
+                                                        <xsl:attribute name="content-width">70mm</xsl:attribute>
+                                                        <xsl:attribute name="content-height">50mm</xsl:attribute>
+                                                    </fo:external-graphic>
                                                 </fo:block>
                                             </fo:table-cell>
                                         </fo:table-row>
@@ -106,6 +123,7 @@
                     </fo:flow>
                 </fo:page-sequence>
             </xsl:for-each>
+
         </fo:root>
     </xsl:template>
 </xsl:stylesheet>

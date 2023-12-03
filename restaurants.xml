@@ -30,19 +30,22 @@
             <name>Ceazer's Pizza</name>
             <type>Italian</type>
             <rating>4.58</rating>
-            <description>A classic Italian Pizza Restaurant</description>
+            <description>A classic Italian Pizza RestaurantA classic Italian Pizza RestaurantA classic Italian Pizza RestaurantA classic Italian Pizza RestaurantA classic Italian Pizza RestaurantA classic Italian Pizza RestaurantA classic Italian Pizza RestaurantA classic Italian Pizza RestaurantA classic Italian Pizza Restaurant</description>
+            <image href="rb.png"></image>
         </restaurant>
         <restaurant restaurantId="CeazersPizza" regionRef="S">
             <name>Indian's Place</name>
             <type>Indian</type>
             <rating>3.28</rating>
             <description>A classic Inidian Food Restaurant</description>
+            <image href="raffy.png"></image>
         </restaurant>
         <restaurant restaurantId="CeazersPizza" regionRef="B" chainRef="Ceazers">
             <name>Ceazer's Pizza</name>
             <type>Italian</type>
             <rating>4.58</rating>
             <description>A classic Italian Pizza Restaurant</description>
+            <image href="roots.png"></image>
         </restaurant>
     </restaurants>
 </catalogue>
