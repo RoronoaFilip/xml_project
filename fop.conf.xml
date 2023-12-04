@@ -1,9 +1,16 @@
-<fop>
+<?xml version="1.0"?>
+<fop version="1.0">
     <renderers>
+        <!-- Other renderer configurations go here -->
+
+        <!-- PDF Renderer Configuration -->
         <renderer mime="application/pdf">
-            <pdf>
-                <allow-external-entities>true</allow-external-entities>
-            </pdf>
+            <fonts>
+                <!-- Specify the default font with triplet -->
+                <font kerning="yes" embed-url=".\DejaVuSans.ttf">
+                    <font-triplet name="DejaVuSans" style="normal" weight="normal" />
+                </font>
+            </fonts>
         </renderer>
     </renderers>
 </fop>

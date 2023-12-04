@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type = "text/xsl" href = "restaurants.xsl"?>
-
 <!-- <!DOCTYPE catalogue SYSTEM "./restaurants.dtd"> -->
-
 <catalogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./restaurants.xsd">
     <!--Regions-->
     <regions>
@@ -10,10 +8,9 @@
             <name>Sofia</name>
         </region>
         <region regionId="B">
-            <name>Burgas</name>
+            <name>Бургас</name>
         </region>
     </regions>
-
     <!--Chains-->
     <restaurant-chains>
         <chain chainId="H">
@@ -23,7 +20,6 @@
             <name>Ceazers</name>
         </chain>
     </restaurant-chains>
-
     <!--Restaurants-->
     <restaurants>
         <restaurant restaurantId="CeazersPizza" regionRef="S" chainRef="Ceazers">
@@ -37,7 +33,7 @@
             <name>Indian's Place</name>
             <type>Indian</type>
             <rating>3.28</rating>
-            <description>A classic Inidian Food Restaurant</description>
+            <description>Класическо индийско ресторантче</description>
             <image href="raffy.png"></image>
         </restaurant>
         <restaurant restaurantId="CeazersPizza" regionRef="B" chainRef="Ceazers">
