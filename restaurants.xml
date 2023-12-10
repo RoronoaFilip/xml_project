@@ -4,44 +4,160 @@
 <catalogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./restaurants.xsd">
     <!--Regions-->
     <regions>
-        <region regionId="S">
-            <name>Sofia</name>
+        <region regionId="CB">
+            <name>София</name>
         </region>
-        <region regionId="B">
+        <region regionId="PB">
+            <name>Пловдив</name>
+        </region>
+        <region regionId="A">
             <name>Бургас</name>
         </region>
+        <region regionId="B">
+            <name>Варна</name>
+        </region>
     </regions>
+
     <!--Chains-->
     <restaurant-chains>
         <chain chainId="H">
             <name>Happy</name>
         </chain>
-        <chain chainId="C">
-            <name>Ceazers</name>
+        <chain chainId="SC">
+            <name>Stariya Chinar</name>
         </chain>
     </restaurant-chains>
+
     <!--Restaurants-->
     <restaurants>
-        <restaurant restaurantId="CeazersPizza" regionRef="S" chainRef="Ceazers">
-            <name>Ceazer's Pizza</name>
-            <type>Italian</type>
-            <rating>4.58</rating>
-            <description>A classic Italian Pizza RestaurantA classic Italian Pizza RestaurantA classic Italian Pizza RestaurantA classic Italian Pizza RestaurantA classic Italian Pizza RestaurantA classic Italian Pizza RestaurantA classic Italian Pizza RestaurantA classic Italian Pizza RestaurantA classic Italian Pizza Restaurant</description>
-            <image href="rb.png"></image>
+        <restaurant restaurantId="chefs" regionRef="CB">
+            <name>Chef's</name>
+            <type>European, Central European, International</type>
+            <rating>4.5</rating>
+            <description>
+                При нас ще се насладите на авторската сезонна кухня на chef Виктор Ангелов. 
+                Той е готвач с изключителен афинитет към фините вкусове, 
+                изнедадващи комбинации от аромати и неподправена скромност към собствените си кулинарни 
+                шедьоври, наричайки ги “вкусно похапване”.
+            </description>
+            <images>
+                <image>chefs.jpg</image>
+                <image>chefs2.jpg</image>
+            </images>
         </restaurant>
-        <restaurant restaurantId="CeazersPizza" regionRef="S">
-            <name>Indian's Place</name>
-            <type>Indian</type>
-            <rating>3.28</rating>
-            <description>Класическо индийско ресторантче</description>
-            <image href="raffy.png"></image>
+        <restaurant restaurantId="happy-sofia" regionRef="CB" chainRef="H">
+            <name>Happy Bar and Grill</name>
+            <type>Local cuisine, Bar, Seafood, Barbecue, Sushi, European</type>
+            <rating>4</rating>
+            <description>
+                Happy Света Неделя е вторият ни ресторант в София, който съществува от 2000 г. 
+                Разположен в сърцето на града, ресторантът предлага модерен интериор и нова лятна градина, 
+                предоставяйки допълнителен комфорт по време на посещението ви. Всеки посетител може да се 
+                наслади на танцуващите сервитьорки, обещаващи приятен вечер при нас, изпълнен със забавление. 
+                Happy Света Неделя е сред ресторантите, които приготвят вашите ястия в фурната Josper, 
+                най-горещия вътрешен барбекю, който запазва хранителната стойност на съставките, за да създаде 
+                перфектното гурме преживяване.
+            </description>
+            <images>
+                <image>happy.png</image>
+                <image>happy3.jpg</image>
+            </images>
         </restaurant>
-        <restaurant restaurantId="CeazersPizza" regionRef="B" chainRef="Ceazers">
-            <name>Ceazer's Pizza</name>
-            <type>Italian</type>
-            <rating>4.58</rating>
-            <description>A classic Italian Pizza Restaurant</description>
-            <image href="roots.png"></image>
+        <restaurant restaurantId="aylyakria" regionRef="PB">
+            <name>Aylyakria</name>
+            <type>European, Healthy, Eastern European, Central European</type>
+            <rating>5</rating>
+            <description>
+                Семпло и сочно, но изтънчено и със стил. Винаги носещо блаженство. 
+                Потапяш се в уютната атмосфера на 100-годишна сграда в Капана – автентични 
+                тухлени стени и дървени греди, подчертани от зелени растения; котленско килимче 
+                между елеганостността на мрамор и кадифе
+            </description>
+            <images>
+                <image>aylyakria.png</image>
+                <image>aylyakria2.png</image>
+                <image>aylyakria3.png</image>
+            </images>
+        </restaurant>
+        <restaurant restaurantId="le-petit-paris" regionRef="PB">
+            <name>Le Petit Paris</name>
+            <type>Local cuisine, Italian, French</type>
+            <rating>4.55</rating>
+            <description>
+                Le Petit Paris ("Малкия Париж") е един от най-реномираните семейни ресторанти в Пловдив. 
+                Ресторантът е открит през 2015 г., като интериорът му е пресъздаден в стил френски прованс. 
+                Уютен и в същото време изискан, ресторантът е подходящ, както за вашия ежедневен работен обяд, 
+                така и за празнуване на специален повод.
+            </description>
+            <images>
+                <image>lepetitparis.jpeg</image>
+                <image>lepetitparis2.png</image>
+            </images>
+        </restaurant>
+        <restaurant restaurantId="happy-burgas" regionRef="A" chainRef="H">
+            <name>Happy Bar and Grill</name>
+            <type>Local cuisine, Bar, Barbecue, Sushi, European, Vegetarian Friendly</type>
+            <rating>4</rating>
+            <description>
+                На 7 юли 2010 г. Happy откри втория си ресторан в град Бургас. 
+                Сега жителите и посетителите на Бургас могат да се насладят на 
+                уникалните специалитети на Happy и тук. Предлагат се добре познатите 
+                Happy менюта, както и автентичните японски суши, приготвени от обучени професионалисти.
+            </description>
+            <images>
+                <image>happy-burgas.png</image>
+                <image>happy-burgas2.png</image>
+            </images>
+        </restaurant>
+        <restaurant restaurantId="incanto" regionRef="A">
+            <name>Incanto</name>
+            <type>Vegetarian Friendly, Vegan Options, Gluten Free Options</type>
+            <rating>5</rating>
+            <description>
+                Вече 12 години нашата мисия е да радваме своите гости с фантастични кулинарни преживявания 
+                и да ги накараме да се откъснат от рутината на ежедневието!
+                Попаднал веднъж в някой от нашите ресторанти ти вече знаеш, че 
+                си на специално място! Incanto е компилация от вкус и усещане. 
+                Храна за душата, която прави всяко хранене запомнящо се! Атмосфера, 
+                хубава музика и отношение, които очароват и те карат да се влюбиш!
+            </description>
+            <images>
+                <image>incanto.png</image>
+                <image>incanto2.png</image>
+            </images>
+        </restaurant>
+        <restaurant restaurantId="old-chinar" regionRef="B" chainRef="SC">
+            <name>Staria Chinar - Cherno More</name>
+            <type>Barbecue, European, Healthy, Eastern European</type>
+            <rating>5</rating>
+            <description>
+                Кетъринг „Стария Чинар“, Варна представя меню, докоснато от магията 
+                на нашата кухня…вкусна храна, приготвена от пресни и подбрани продукти 
+                с атрактивно представяне и безупречно обслужване!
+                В модерна атмосфера към познатото менюто, добавихме и ПИЦИ по италианска 
+                технология с традиционния вкус на „Стария Чинар“.
+            </description>
+            <images>
+                <image>old-chinar.png</image>
+                <image>old-chinar2.png</image>
+            </images>
+        </restaurant>
+        <restaurant restaurantId="el-kapan" regionRef="B">
+            <name>El Kapan</name>
+            <type>Caribbean, Seafood, Mediterranean</type>
+            <rating>4.5</rating>
+            <description>
+                С тези думи Боб Марли е описал настроението, което носи Ел Капан и с 
+                което бихме искали да заразим и Вас. Надяваме се, че нашето местенце, 
+                направено с много любов, желание и настроение, ще остави у Вас приятния 
+                вкус на едно незабравимо лято. Вкус на безбрежно меню, изпълнено с невероятни 
+                кулинарни удоволствия.Вкус на авторски коктейли, които ще Ви потопят в темперамента 
+                на Карибите.
+            </description>
+            <images>
+                <image>el-kapan.png</image>
+                <image>el-kapan2.png</image>
+            </images>
         </restaurant>
     </restaurants>
 </catalogue>
