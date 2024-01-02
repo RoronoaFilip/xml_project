@@ -99,6 +99,13 @@
                                                     <fo:block font-size="10pt" space-after="6pt" color="#666666"> Описание:
                                                         <xsl:value-of select="description" />
                                                     </fo:block>
+                                                    <!-- Restaurant Additional Info -->
+                                                    <fo:block font-size="10pt" space-after="6pt" color="#666666"> Работно време:
+                                                        <xsl:value-of select="additionalInfo/workingHours" />
+                                                    </fo:block>
+                                                    <fo:block font-size="10pt" space-after="6pt" color="#666666"> Телефон:
+                                                        <xsl:value-of select="additionalInfo/phone" />
+                                                    </fo:block>
                                                 </fo:block>
                                             </fo:table-cell>
                                         </fo:table-row>

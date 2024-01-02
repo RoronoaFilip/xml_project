@@ -44,6 +44,10 @@
                 <image>chefs.jpg</image>
                 <image>chefs2.jpg</image>
             </images>
+            <additionalInfo>
+                <phone>0700 20 888</phone>
+                <workingHours>11:30ч.–23:30ч.</workingHours>
+            </additionalInfo>
         </restaurant>
         <restaurant restaurantId="happy-sofia" regionRef="CB" chainRef="H">
             <name>Happy Bar and Grill</name>
@@ -62,6 +66,10 @@
                 <image>happy.png</image>
                 <image>happy3.jpg</image>
             </images>
+            <additionalInfo>
+                <phone>089 672 3222</phone>
+                <workingHours>11:30ч.–23:30ч.</workingHours>
+            </additionalInfo>
         </restaurant>
         <restaurant restaurantId="aylyakria" regionRef="PB">
             <name>Aylyakria</name>
@@ -78,6 +86,10 @@
                 <image>aylyakria2.png</image>
                 <image>aylyakria3.png</image>
             </images>
+            <additionalInfo>
+                <phone>087 616 3666</phone>
+                <workingHours>12:00ч.–23:30ч.</workingHours>
+            </additionalInfo>
         </restaurant>
         <restaurant restaurantId="le-petit-paris" regionRef="PB">
             <name>Le Petit Paris</name>
@@ -93,6 +105,10 @@
                 <image>lepetitparis.jpeg</image>
                 <image>lepetitparis2.png</image>
             </images>
+            <additionalInfo>
+                <phone>088 966 6555</phone>
+                <workingHours>11:00ч.–23:30ч.</workingHours>
+            </additionalInfo>
         </restaurant>
         <restaurant restaurantId="happy-burgas" regionRef="A" chainRef="H">
             <name>Happy Bar and Grill</name>
@@ -108,6 +124,10 @@
                 <image>happy-burgas.png</image>
                 <image>happy-burgas2.png</image>
             </images>
+            <additionalInfo>
+                <phone>0700 20 888</phone>
+                <workingHours>11:00ч.–22:00ч.</workingHours>
+            </additionalInfo>
         </restaurant>
         <restaurant restaurantId="incanto" regionRef="A">
             <name>Incanto</name>
@@ -125,6 +145,10 @@
                 <image>incanto.png</image>
                 <image>incanto2.png</image>
             </images>
+            <additionalInfo>
+                <phone>089 364 1833</phone>
+                <workingHours>11:00ч.–23:00ч.</workingHours>
+            </additionalInfo>
         </restaurant>
         <restaurant restaurantId="old-chinar" regionRef="B" chainRef="SC">
             <name>Staria Chinar - Cherno More</name>
@@ -134,13 +158,17 @@
                 Кетъринг „Стария Чинар“, Варна представя меню, докоснато от магията 
                 на нашата кухня…вкусна храна, приготвена от пресни и подбрани продукти 
                 с атрактивно представяне и безупречно обслужване!
-                В модерна атмосфера към познатото менюто, добавихме и ПИЦИ по италианска 
+                В модерна атмосфера към познатото менюто, добавихме и пици по италианска 
                 технология с традиционния вкус на „Стария Чинар“.
             </description>
             <images>
                 <image>old-chinar.png</image>
                 <image>old-chinar2.png</image>
             </images>
+            <additionalInfo>
+                <phone>087 892 2822</phone>
+                <workingHours>09:00ч.–23:00ч.</workingHours>
+            </additionalInfo>
         </restaurant>
         <restaurant restaurantId="el-kapan" regionRef="B">
             <name>El Kapan</name>
@@ -158,6 +186,10 @@
                 <image>el-kapan.png</image>
                 <image>el-kapan2.png</image>
             </images>
+            <additionalInfo>
+                <phone>088 377 8977</phone>
+                <workingHours>11:00ч.–23:00ч.</workingHours>
+            </additionalInfo>
         </restaurant>
     </restaurants>
 </catalogue>

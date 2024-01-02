@@ -19,10 +19,17 @@
             <xs:element name="rating" type="xs:float"/>
             <xs:element name="description" type="xs:string"/>
             <xs:element name="images" type="imagesType" minOccurs="0"/>
+            <xs:element name="additionalInfo" type="additionalInfo" minOccurs="1"></xs:element>
         </xs:sequence>
         <xs:attribute name="restaurantId" type="xs:string" use="required"/>
         <xs:attribute name="regionRef" type="xs:string" use="required"/>
         <xs:attribute name="chainRef" type="xs:string"/>
+    </xs:complexType>
+    <xs:complexType name="additionalInfo">
+        <xs:sequence>
+            <xs:element name="phone" type="xs:string" minOccurs="0"></xs:element>
+            <xs:element name="workingHours" type="xs:string" minOccurs="0"></xs:element>
+        </xs:sequence>
     </xs:complexType>
     <xs:complexType name="imagesType">
         <xs:sequence>
