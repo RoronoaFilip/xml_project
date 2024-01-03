@@ -10,7 +10,7 @@
                     <fo:region-body margin="2cm" />
                 </fo:simple-page-master>
             </fo:layout-master-set>
-            <!--Project title page -->
+            <!-- Project title page -->
             <fo:page-sequence master-reference="page" font-family="DejaVuSans">
                 <fo:flow flow-name="xsl-region-body">
                     <fo:block position="absolute" text-align="right" font-size="40pt" margin-bottom="30mm" padding-before="15mm"> Тема №26:
@@ -49,15 +49,22 @@
                     </fo:block>
                 </fo:flow>
             </fo:page-sequence>
-            <!--Each Region on a new Page-->
+            <fo:page-sequence master-reference="page" font-family="DejaVuSans">
+                <fo:flow flow-name="xsl-region-body">
+                    <fo:block position="absolute" text-align="center" font-size="34pt" padding-before="30mm" color="#333333">
+                        Каталог на ресторанти в България
+                    </fo:block>
+                </fo:flow>
+            </fo:page-sequence>
+            <!-- Each Region on a new Page-->
             <xsl:for-each select="//region">
                 <fo:page-sequence master-reference="page" font-family="DejaVuSans">
                     <fo:flow flow-name="xsl-region-body">
                         <fo:block font-size="24pt" font-weight="bold" text-align="center" space-after="12pt" color="#000000">
-                            <xsl:value-of select="name" />
+                            Регион - <xsl:value-of select="name" />
                         </fo:block>
                         <fo:block space-after="18pt" />
-                        <!--Each Restaurant in the current Region-->
+                        <!-- Each Restaurant in the current Region-->
                         <xsl:for-each select="/catalogue/restaurants/restaurant[@regionRef = current()/@regionId]">
                             <xsl:variable name="position" select="position()" />
                             <fo:block space-after="18pt" border="2pt solid #336699" padding="16pt" background-color="#F0F0F0">

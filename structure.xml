@@ -1,0 +1,32 @@
+<catalogue>
+    <regions>
+        <region regionId="">
+            <name></name>
+        </region>
+    </regions>
+
+    <restaurant-chains>
+        <chain chainId="">
+            <name></name>
+        </chain>
+        <chain chainId="">
+            <name></name>
+        </chain>
+    </restaurant-chains>
+
+    <restaurants>
+        <restaurant restaurantId="" regionRef="">
+            <name></name>
+            <type></type>
+            <rating></rating>
+            <description></description>
+            <images>
+                <image></image>
+            </images>
+            <additionalInfo>
+                <phone></phone>
+                <workingHours></workingHours>
+            </additionalInfo>
+        </restaurant>
+    </restaurants>
+</catalogue>
