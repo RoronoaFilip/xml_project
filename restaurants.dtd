@@ -8,7 +8,7 @@
 <!ATTLIST chain chainId CDATA #REQUIRED>
 
 <!ELEMENT restaurants (restaurant*)>
-<!ELEMENT restaurant (name, type, rating, description, images?, additionalInfo)>
+<!ELEMENT restaurant (name, type, rating, description, images?, additionalInfo?)>
 <!ATTLIST restaurant
     restaurantId CDATA #REQUIRED
     regionRef CDATA #REQUIRED
