@@ -6,7 +6,7 @@
     <xsl:template match="/">
         <fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
             <fo:layout-master-set>
-                <fo:simple-page-master master-name="page" page-width="21cm" page-height="29.7cm" margin="2cm">
+                <fo:simple-page-master master-name="page" margin="2cm">
                     <fo:region-body margin="2cm" />
                 </fo:simple-page-master>
             </fo:layout-master-set>
@@ -35,32 +35,51 @@
                                     </fo:table-row>
                                     <fo:table-row>
                                         <fo:table-cell>
-                                            <fo:block font-style="italic">Проверен от:</fo:block>
+                                            <fo:block font-style="italic">Проверен от: </fo:block>
                                         </fo:table-cell>
                                         <fo:table-cell>
-                                            <fo:block margin-bottom="30mm">гл. ас. д-р Явор Данков</fo:block>
+                                            <fo:block margin-bottom="10mm" padding="0 0 3mm 0"> гл. ас. д-р Явор Данков</fo:block>
                                         </fo:table-cell>
                                     </fo:table-row>
                                 </fo:table-body>
                             </fo:table>
                         </fo:block>
-                        <fo:block text-align="center"> януари 2023 г.
+                        <fo:block text-align="center"> януари 2024 г.
                             <fo:block /> гр. София </fo:block>
                     </fo:block>
                 </fo:flow>
             </fo:page-sequence>
             <fo:page-sequence master-reference="page" font-family="DejaVuSans">
                 <fo:flow flow-name="xsl-region-body">
-                    <fo:block position="absolute" text-align="center" font-size="34pt" padding-before="30mm" color="#333333">
-                        Каталог на ресторанти в България
-                    </fo:block>
+                    <fo:table width="100%">
+                        <fo:table-body>
+                            <fo:table-row>
+                                <fo:table-cell>
+                                    <fo:block position="absolute" text-align="center" font-size="34pt" padding-before="25mm" color="#333333">
+                                    Каталог на ресторанти в България
+                                    </fo:block>
+                                </fo:table-cell>
+                            </fo:table-row>
+                            <fo:table-row>
+                                <fo:table-cell>
+                                    <fo:block text-align="center">
+                                        <fo:external-graphic src="./images/combined_photos.jpg">
+                                            <xsl:attribute name="content-width">160mm</xsl:attribute>
+                                            <xsl:attribute name="content-height">125mm</xsl:attribute>
+                                        </fo:external-graphic>
+                                    </fo:block>
+                                </fo:table-cell>
+                            </fo:table-row>
+                        </fo:table-body>
+                    </fo:table>
                 </fo:flow>
             </fo:page-sequence>
             <!-- Each Region on a new Page-->
             <xsl:for-each select="//region">
                 <fo:page-sequence master-reference="page" font-family="DejaVuSans">
                     <fo:flow flow-name="xsl-region-body">
-                        <fo:block font-size="24pt" font-weight="bold" text-align="center" space-after="12pt" color="#000000">
+                        <fo:block font-size="24pt" font-weight="bold" text-align="center" space-after="12pt" color="#000000"
+                            border="2pt solid #336699" padding="16pt" background-color="#F0F0F0">
                             Регион - <xsl:value-of select="name" />
                         </fo:block>
                         <fo:block space-after="18pt" />

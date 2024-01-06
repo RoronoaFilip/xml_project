@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type = "text/xsl" href = "restaurants.xsl"?>
 <!-- <!DOCTYPE catalogue SYSTEM "./restaurants.dtd"> -->
-<catalogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./restaurants.xsd">
+<catalogue>
     <!--Regions-->
     <regions>
         <region regionId="CB">
