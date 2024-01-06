@@ -1,2 +1,0 @@
-"..\..\..\Program Files\fop-2.9\fop\fop" -xml restaurants.xml -xsl restaurants.xsl -pdf output.pdf -c fop.conf.xml
-"..\..\..\Program Files\fop-2.9\fop\fop" - path to fop bash or batch script
