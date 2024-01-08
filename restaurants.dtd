@@ -1,18 +1,18 @@
 <!ELEMENT catalogue (regions, restaurant-chains, restaurants)>
 <!ELEMENT regions (region*)>
 <!ELEMENT region (name)>
-<!ATTLIST region regionId CDATA #REQUIRED>
+<!ATTLIST region regionId ID #REQUIRED>
 
 <!ELEMENT restaurant-chains (chain*)>
 <!ELEMENT chain (name)>
-<!ATTLIST chain chainId CDATA #REQUIRED>
+<!ATTLIST chain chainId ID #REQUIRED>
 
 <!ELEMENT restaurants (restaurant*)>
 <!ELEMENT restaurant (name, type, rating, description, images?, additionalInfo?)>
 <!ATTLIST restaurant
-    restaurantId CDATA #REQUIRED
-    regionRef CDATA #REQUIRED
-    chainRef CDATA #IMPLIED>
+    restaurantId ID #REQUIRED
+    regionRef IDREF #REQUIRED
+    chainRef IDREF #IMPLIED>
 
 <!ELEMENT additionalInfo (phone?, workingHours?)>
 <!ELEMENT phone (#PCDATA)>
