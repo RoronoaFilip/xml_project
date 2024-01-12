@@ -25,3 +25,28 @@
 <!ELEMENT rating (#PCDATA)>
 <!ELEMENT description (#PCDATA)>
 <!ELEMENT image (#PCDATA)>
+
+<!ENTITY chefs_image1 SYSTEM "images/chefs.jpg">
+<!ENTITY chefs_image2 SYSTEM "images/chefs2.jpg">
+
+<!ENTITY happy_sofia_image1 SYSTEM "images/happy.png">
+<!ENTITY happy_sofia_image2 SYSTEM "images/happy3.jpg">
+
+<!ENTITY aylyakria_image1 SYSTEM "images/aylyakria.png">
+<!ENTITY aylyakria_image2 SYSTEM "images/aylyakria2.png">
+<!ENTITY aylyakria_image3 SYSTEM "images/aylyakria3.png">
+
+<!ENTITY le_petit_paris_image1 SYSTEM "images/lepetitparis.jpeg">
+<!ENTITY le_petit_paris_image2 SYSTEM "images/lepetitparis2.png">
+
+<!ENTITY happy_burgas_image1 SYSTEM "images/happy-burgas.png">
+<!ENTITY happy_burgas_image2 SYSTEM "images/happy-burgas2.png">
+
+<!ENTITY incanto_image1 SYSTEM "images/incanto.png">
+<!ENTITY incanto_image2 SYSTEM "images/incanto2.png">
+
+<!ENTITY old_chinar_image1 SYSTEM "images/old-chinar.png">
+<!ENTITY old_chinar_image2 SYSTEM "images/old-chinar2.png">
+
+<!ENTITY el_kapan_image1 SYSTEM "images/el-kapan.png">
+<!ENTITY el_kapan_image2 SYSTEM "images/el-kapan2.png">

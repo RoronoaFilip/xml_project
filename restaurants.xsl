@@ -144,10 +144,7 @@
                                                 <fo:table-cell padding-before="8pt">
                                                     <!-- Image Block with space between each image -->
                                                     <fo:block text-align="center" space-after="5mm">
-                                                        <fo:external-graphic>
-                                                            <xsl:attribute name="src">
-                                                                <xsl:value-of select="concat('url(images/', ., ')')" />
-                                                            </xsl:attribute>
+                                                        <fo:external-graphic src="current()">
                                                             <xsl:attribute name="content-width">70mm</xsl:attribute>
                                                             <xsl:attribute name="content-height">50mm</xsl:attribute>
                                                         </fo:external-graphic>
